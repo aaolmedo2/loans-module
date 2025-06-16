@@ -24,7 +24,7 @@ public class AccionistasEmpresas {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.RESTRICT)
     @JoinColumn(name = "id_participe", nullable = false)
-    private com.banquito.core.clientes.modelo.Empresas idParticipe;
+    private com.banquito.core.clientes.modelo.Participe idParticipe;
 
     @Column(name = "participacion", nullable = false, precision = 5, scale = 2)
     private BigDecimal participacion;
@@ -54,11 +54,11 @@ public class AccionistasEmpresas {
         this.idEmpresa = idEmpresa;
     }
 
-    public com.banquito.core.clientes.modelo.Empresas getIdParticipe() {
+    public com.banquito.core.clientes.modelo.Participe getIdParticipe() {
         return idParticipe;
     }
 
-    public void setIdParticipe(com.banquito.core.clientes.modelo.Empresas idParticipe) {
+    public void setIdParticipe(com.banquito.core.clientes.modelo.Participe idParticipe) {
         this.idParticipe = idParticipe;
     }
 
